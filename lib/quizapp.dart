@@ -19,7 +19,10 @@ class _QuizAppState extends State<QuizApp> {
     return Expanded(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: buttonColor),
-        child: Text(buttonText),
+        child: Text(
+          buttonText,
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        ),
         onPressed: () {
           setState(() {
             if (allQuestion.gamefinish() == true) {
@@ -30,7 +33,7 @@ class _QuizAppState extends State<QuizApp> {
                   child: Column(
                     children: [
                       Text(
-                        _totallCurrectAnswer.toString(),
+                        'Currect Answer : ${_totallCurrectAnswer.toString()}',
                         style: TextStyle(fontSize: 30),
                       ),
                       Text(
